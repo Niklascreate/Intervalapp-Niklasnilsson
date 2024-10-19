@@ -1,0 +1,13 @@
+.homepage-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.homepage-img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    width: 184px;
+}
