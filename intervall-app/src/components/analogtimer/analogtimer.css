@@ -1,0 +1,37 @@
+.analogtimer-wrapper {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.sek-spinner {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    width: 6px;
+    height: 170px;
+    background: rgb(241, 188, 232);;
+    transform-origin: bottom center;
+    transform: translateX(-50%) translateY(-100%) rotate(0deg);
+    animation: seconds 60s linear infinite;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+
+
+.min-spinner {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    width: 6px;
+    height: 170px;
+    background: rgb(212, 52, 185);;
+    transform-origin: bottom center;
+    transform: translateX(-50%) translateY(-100%) rotate(0deg);
+    animation: minutes 3600s linear infinite;
+    box-shadow: 0 0 10px rgba(84, 82, 82, 0.5);
+    border-radius: 1rem;
+}
