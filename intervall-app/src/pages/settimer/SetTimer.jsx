@@ -7,24 +7,22 @@ import { useNavigate } from 'react-router-dom';
 
 function SetTimer() {
 
-  const [time, setTime] = useState(0); // Tiden i minuter
+  const [time, setTime] = useState(0);
   const navigate = useNavigate();
 
-  // Funktion för att öka tiden
+
   const increaseTime = () => {
     setTime(prev => prev + 1);
   };
 
-  // Funktion för att minska tiden
   const decreaseTime = () => {
-    setTime(prev => (prev > 0 ? prev - 1 : 0)); // Ingen negativ tid
+    setTime(prev => (prev > 0 ? prev - 1 : 0));
   };
 
-  // Omvandla minuter till sekunder för easyTimer
   const seconds = time * 60;
 
   const handleStart = () => {
-    navigate('/TimerPage', { state: { time: seconds } }); // Navigera till TimerPage med tiden
+    navigate('/TimerPage', { state: { time: seconds } });
   };
 
 

@@ -11,27 +11,26 @@
     top: 50%;
     left: 50%;
     position: absolute;
-    width: 6px;
-    height: 170px;
+    width: 2px;
+    height: 90px;
     background: rgb(241, 188, 232);
     transform-origin: bottom center;
-    transform: translateX(-50%) translateY(-100%) rotate(0deg);
-    /* animation: seconds 60s linear infinite; */
+    transform: translateX(-50%) translateY(-100%);
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
     border-radius: 1rem;
+    transition: transform 0.1s ease-in-out;
 }
-
 
 .min-spinner {
     top: 50%;
     left: 50%;
     position: absolute;
-    width: 6px;
-    height: 170px;
-    background: rgb(212, 52, 185);;
+    width: 4px;
+    height: 70px;
+    background: rgb(212, 52, 185);
     transform-origin: bottom center;
-    transform: translateX(-50%) translateY(-100%) rotate(0deg);
-    /* animation: minutes 3600s linear infinite; */
+    transform: translateX(-50%) translateY(-100%);
     box-shadow: 0 0 10px rgba(84, 82, 82, 0.5);
     border-radius: 1rem;
+    transition: transform 0.5s ease-in-out;
 }
