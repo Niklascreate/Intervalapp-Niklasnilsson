@@ -1,5 +1,42 @@
-.menu-btn {
-    width: 10px;
-    height: auto;
+.menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: -100%; /* Startar ovanför skärmen */
+  left: 0;
+  width: 100%;
+  background-color: rgb(25, 39, 74);
+  transition: top 0.3s ease; /* Smooth transition for toggling */
+  z-index: 1000;
+  opacity: 0.90; /* Semi-transparent bakgrund */
+}
 
+.menu-wrapper.open {
+  top: 0; /* Flytta ner menyn när den är öppen */
+}
+
+.menu-wrapper ul {
+  list-style-type: none; /* Ta bort punktlistor */
+  margin: 0;
+  padding: 0;
+}
+
+.menu-wrapper li {
+  margin-top: 2rem; /* Avstånd mellan menyalternativ */
+}
+
+.menu-wrapper a {
+  color: white; /* Textfärg */
+  text-decoration: none; /* Ingen understrykning */
+  font-size: 18px; /* Förstora texten om nödvändigt */
+}
+
+#menu-toggle {
+  cursor: pointer; /* Handpekare vid hover */
+  border: none; /* Ingen kantlinje */
+  background: linear-gradient(to right, #a18cd1, #fbc2eb); /* Gradientbakgrund */
+  padding: 10px;
+  border-radius: 0.5rem; /* Rundade hörn */
 }

@@ -21,6 +21,16 @@
 }
 
 .increase {
+   cursor: pointer;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid rgb(255, 255, 255);
+    margin-left: 10px;
+}
+
+.decrease {
     width: 0;
     height: 0;
     border-top: 10px solid transparent;
@@ -28,16 +38,6 @@
     border-right: 15px solid rgb(255, 255, 255);
     margin-right: 10px;
     cursor: pointer;
-}
-
-.decrease {
-    cursor: pointer;
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 15px solid rgb(255, 255, 255);
-    margin-left: 10px;
 }
 
 .minutes {

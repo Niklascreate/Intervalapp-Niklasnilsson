@@ -13,10 +13,10 @@
     position: absolute;
     width: 6px;
     height: 170px;
-    background: rgb(241, 188, 232);;
+    background: rgb(241, 188, 232);
     transform-origin: bottom center;
     transform: translateX(-50%) translateY(-100%) rotate(0deg);
-    animation: seconds 60s linear infinite;
+    /* animation: seconds 60s linear infinite; */
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
     border-radius: 1rem;
 }
@@ -31,7 +31,7 @@
     background: rgb(212, 52, 185);;
     transform-origin: bottom center;
     transform: translateX(-50%) translateY(-100%) rotate(0deg);
-    animation: minutes 3600s linear infinite;
+    /* animation: minutes 3600s linear infinite; */
     box-shadow: 0 0 10px rgba(84, 82, 82, 0.5);
     border-radius: 1rem;
 }

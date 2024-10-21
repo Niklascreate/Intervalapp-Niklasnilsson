@@ -1,17 +1,10 @@
 import './startbtn.css';
-import { useNavigate } from 'react-router-dom';
 
-function StartBtn() {
-  const navigate = useNavigate();
-
-  function goToAnalogpage() {
-    navigate('/AnalogPage');
-  }
-
+function StartBtn({ onClick }) {
   return (
-    <div>
-      <button onClick={goToAnalogpage} className='start-btn'>START TIMER</button>
-    </div>
+    <button className="start-btn" onClick={onClick}>
+      Starta Timer
+    </button>
   );
 }
 

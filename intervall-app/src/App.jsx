@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/homepage/HomePage';
 import SetTimer from './pages/settimer/SetTimer';
-import AnalogPage from './pages/analogpage/AnalogPage';
+import TimerPage from './pages/timerpage/TimerPage';
+import Menu from './components/menu/Menu';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/SetTimer" element={<SetTimer />} />
-          <Route path="/AnalogPage" element={<AnalogPage />} />
+          <Route path="/TimerPage" element={<TimerPage />} />
         </Routes>
       </div>
     </Router>

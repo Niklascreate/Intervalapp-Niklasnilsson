@@ -1,23 +1,36 @@
+import { useState, useEffect } from 'react';
 import './menu.css';
 
-function Menu() {
+function Menu({ handleAnalogTimer, handleDigitalTimer }) {
+  const [isOpen, setIsOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsOpen(prev => !prev);
+  };
 
+  const closeMenu = (e) => {
+    const nav = document.querySelector('nav');
+    if (isOpen && !nav.contains(e.target) && !e.target.matches('#menu-toggle')) {
+      setIsOpen(false);
+    }
+  };
 
-    
+  useEffect(() => {
+    document.body.addEventListener('click', closeMenu);
+    return () => {
+      document.body.removeEventListener('click', closeMenu);
+    };
+  }, [isOpen]);
+
   return (
     <div>
-      <nav className='menu-wrapper'>
+      <nav className={`menu-wrapper ${isOpen ? 'open' : ''}`}>
         <ul>
-          <li>
-            <a href="#">Digital timer</a>
-          </li>
-          <li>
-            <a href="#">Analog timer</a>
-          </li>
+          <li onClick={() => { handleAnalogTimer(); closeMenu(); }}><a href="#analog">Analog Timer</a></li>
+          <li onClick={() => { handleDigitalTimer(); closeMenu(); }}><a href="#digital">Digital Timer</a></li>
         </ul>
       </nav>
-      <button className='menu-btn'>Menu</button>
+      <img id="menu-toggle" onClick={toggleMenu} src="src/assets/navicon.svg" alt="Menu Icon" />
     </div>
   );
 }
