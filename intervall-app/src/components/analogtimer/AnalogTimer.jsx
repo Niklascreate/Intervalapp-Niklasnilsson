@@ -6,29 +6,24 @@ function AnalogTimer({ time }) {
   const [secondDegrees, setSecondDegrees] = useState(0);
 
   useEffect(() => {
-    const updateDegrees = () => {
+    const updateAngles = () => {
       const totalMinutes = Math.floor(time / 60);
       const seconds = time % 60;
 
+      // Beräkna vinklar baserat på den nuvarande tiden
       setMinuteDegrees((totalMinutes % 60) * 6);
-      // Ändra till - (seconds * 6) för att snurra medurs
-      setSecondDegrees(-(seconds * 6)); // Motsatt riktning
+      setSecondDegrees(-(seconds * 6));
     };
 
-    updateDegrees();
-
-    const intervalId = setInterval(() => {
-      if (time > 0) {
-        updateDegrees();
-      }
-    }, 1000);
+    updateAngles(); // Uppdatera initiala vinklar
+    const intervalId = setInterval(updateAngles, 1000); // Uppdatera vinklar varje sekund
 
     return () => clearInterval(intervalId);
   }, [time]);
 
   return (
     <div className="analogtimer-wrapper">
-      <img className='timer-circle' src="src\assets\minutes.svg" alt="" />
+      <img className='timer-circle' src="src/assets/minutes.svg" alt="" />
       <article
         className="min-spinner"
         style={{ transform: `translateX(-50%) translateY(-100%) rotate(${minuteDegrees}deg)` }}
@@ -37,7 +32,6 @@ function AnalogTimer({ time }) {
         className="sek-spinner"
         style={{ transform: `translateX(-50%) translateY(-100%) rotate(${secondDegrees}deg)` }}
       ></article>
-    
     </div>
   );
 }

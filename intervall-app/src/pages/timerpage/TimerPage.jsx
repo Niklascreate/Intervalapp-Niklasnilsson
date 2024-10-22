@@ -21,6 +21,7 @@ function TimerPage() {
 
     const updateTimer = () => {
       const remainingTime = timer.getTimeValues().seconds;
+      
       setTimeLeft(remainingTime);
     };
 
@@ -46,7 +47,7 @@ function TimerPage() {
         handleDigitalTimer={handleDigitalTimer}
       />
       <div className='timerpage-wrapper'>
-        {displayAnalog ? <AnalogTimer time={timeLeft} /> : <DigitalTimer time={timeLeft} />}
+        {displayAnalog ? <AnalogTimer time={timeLeft} /> : <DigitalTimer time={timeLeft}  />}
         <AbortBtn />
       </div>
     </>

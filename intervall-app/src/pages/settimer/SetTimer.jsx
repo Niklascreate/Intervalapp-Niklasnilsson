@@ -18,6 +18,7 @@ function SetTimer() {
 
   const handleStart = () => {
     const seconds = time * 60;
+    console.log('Skickar tid(kontroll)', seconds);
     navigate('/TimerPage', { state: { time: seconds } });
   };
 
