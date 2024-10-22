@@ -24,7 +24,6 @@ function SetTimer() {
 
   return (
     <>
-      <Menu />
       <div className="settimer-wrapper">
         <section className='timer-container'>
           <aside className='decrease' onClick={decreaseTime}></aside>

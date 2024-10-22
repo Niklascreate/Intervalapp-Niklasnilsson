@@ -1,5 +1,6 @@
 import SetNewTimer from '../../components/setnewtimer/SetNewTimer'
 import './alarmpage.css'
+import { motion } from 'framer-motion'
 
 function AlarmPage() {
   return (
