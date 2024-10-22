@@ -1,8 +1,8 @@
 import './startbtn.css';
 
-function StartBtn({ onClick }) {
+function StartBtn({ handleStartClick }) {
   return (
-    <button className="start-btn" onClick={onClick}>
+    <button className="start-btn" onClick={handleStartClick}>
       Starta Timer
     </button>
   );

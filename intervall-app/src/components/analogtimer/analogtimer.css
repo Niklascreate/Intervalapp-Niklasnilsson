@@ -1,10 +1,22 @@
 .analogtimer-wrapper {
     width: 200px;
     height: 200px;
-    border: 2px solid black;
-    border-radius: 50%;
+    /* border: 2px solid black;
+    border-radius: 50%; */
     position: relative;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
+}
+
+.timer-circle {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(241, 188, 232);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
 }
 
 .sek-spinner {
@@ -13,10 +25,10 @@
     position: absolute;
     width: 2px;
     height: 90px;
-    background: rgb(241, 188, 232);
+    background: rgb(25, 39, 74);
     transform-origin: bottom center;
     transform: translateX(-50%) translateY(-100%);
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgb(174, 179, 191);
     border-radius: 1rem;
     transition: transform 0.1s ease-in-out;
 }
@@ -27,7 +39,7 @@
     position: absolute;
     width: 4px;
     height: 70px;
-    background: rgb(212, 52, 185);
+    background: rgb(25, 39, 74);
     transform-origin: bottom center;
     transform: translateX(-50%) translateY(-100%);
     box-shadow: 0 0 10px rgba(84, 82, 82, 0.5);

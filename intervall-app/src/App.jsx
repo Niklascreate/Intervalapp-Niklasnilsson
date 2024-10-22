@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/homepage/HomePage';
 import SetTimer from './pages/settimer/SetTimer';
 import TimerPage from './pages/timerpage/TimerPage';
-import Menu from './components/menu/Menu';
 
 function App() {
   return (
