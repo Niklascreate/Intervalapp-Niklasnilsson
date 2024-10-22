@@ -10,13 +10,12 @@ function AnalogTimer({ time }) {
       const totalMinutes = Math.floor(time / 60);
       const seconds = time % 60;
 
-      // Beräkna vinklar baserat på den nuvarande tiden
       setMinuteDegrees((totalMinutes % 60) * 6);
       setSecondDegrees(-(seconds * 6));
     };
 
-    updateAngles(); // Uppdatera initiala vinklar
-    const intervalId = setInterval(updateAngles, 1000); // Uppdatera vinklar varje sekund
+    updateAngles();
+    const intervalId = setInterval(updateAngles, 1000);
 
     return () => clearInterval(intervalId);
   }, [time]);

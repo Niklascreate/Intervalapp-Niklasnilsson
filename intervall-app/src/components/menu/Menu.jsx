@@ -10,7 +10,7 @@ function Menu({ handleAnalogTimer, handleDigitalTimer }) {
 
   const closeMenu = (e) => {
     const nav = document.querySelector('nav');
-    if (isOpen && !nav.contains(e.target) && !e.target.matches('#menu-toggle')) {
+    if (isOpen && nav && !nav.contains(e.target) && !e.target.matches('#menu-toggle')) {
       setIsOpen(false);
     }
   };
@@ -26,8 +26,8 @@ function Menu({ handleAnalogTimer, handleDigitalTimer }) {
     <div>
       <nav className={`menu-wrapper ${isOpen ? 'open' : ''}`}>
         <ul>
-          <li onClick={() => { handleAnalogTimer(); closeMenu(); }}><a href="#analog">Analog Timer</a></li>
-          <li onClick={() => { handleDigitalTimer(); closeMenu(); }}><a href="#digital">Digital Timer</a></li>
+          <li onClick={(e) => { handleAnalogTimer(); closeMenu(e); }}><a href="#analog">Analog Timer</a></li>
+          <li onClick={(e) => { handleDigitalTimer(); closeMenu(e); }}><a href="#digital">Digital Timer</a></li>
         </ul>
       </nav>
       <img id="menu-toggle" onClick={toggleMenu} src="src/assets/navicon.svg" alt="Menu Icon" />

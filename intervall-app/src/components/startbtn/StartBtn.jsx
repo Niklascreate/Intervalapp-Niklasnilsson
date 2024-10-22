@@ -3,7 +3,7 @@ import './startbtn.css';
 function StartBtn({ handleStartClick }) {
   return (
     <button className="start-btn" onClick={handleStartClick}>
-      Starta Timer
+      START TIMER
     </button>
   );
 }
