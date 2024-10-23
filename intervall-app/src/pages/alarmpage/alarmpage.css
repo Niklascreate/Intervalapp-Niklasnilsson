@@ -1,0 +1,26 @@
+.alarmpage-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.alarm-bgr {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.alarm-icon {
+    background-color: rgb(49,62,93);
+    position: absolute;
+}
+
+h2 {
+    background-color: transparent;
+    font-size: 36px;
+    margin-top: 10rem;
+    position: absolute;
+    color: rgb(241, 188, 232);
+}

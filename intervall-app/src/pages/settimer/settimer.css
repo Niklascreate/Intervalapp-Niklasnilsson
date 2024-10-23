@@ -1,0 +1,48 @@
+.settimer-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+}
+
+.set-time {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(241, 188, 232);
+    font-size: 5rem;
+}
+
+.increase {
+   cursor: pointer;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid rgb(255, 255, 255);
+    margin-left: 10px;
+}
+
+.decrease {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid rgb(255, 255, 255);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.minutes {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(241, 188, 232);
+    font-size: 1.2rem;
+    margin-top: 10px;
+}

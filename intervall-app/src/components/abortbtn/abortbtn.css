@@ -1,0 +1,23 @@
+.abortbtn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+}
+
+.abort-btn {
+    width: 10rem;
+    height: auto;
+    padding: 10px;
+    border-radius: 0.5rem;
+    background-color: white;
+    background: linear-gradient(to right, #a18cd1, #fbc2eb);
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    margin-top: 5rem;
+    border: none;
+}

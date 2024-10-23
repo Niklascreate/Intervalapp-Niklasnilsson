@@ -1,0 +1,46 @@
+.analogtimer-wrapper {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.timer-circle {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 0.1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 10);
+}
+
+.sek-spinner {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    width: 2px;
+    height: 90px;
+    background: rgb(25, 39, 74);
+    transform-origin: bottom center;
+    transform: translateX(-50%) translateY(-100%);
+    box-shadow: 0 0 10px rgb(174, 179, 191);
+    border-radius: 1rem;
+    transition: transform 0.1s ease-in-out;
+}
+
+.min-spinner {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    width: 4px;
+    height: 70px;
+    background: rgb(25, 39, 74);
+    transform-origin: bottom center;
+    transform: translateX(-50%) translateY(-100%);
+    box-shadow: 0 0 10px rgba(84, 82, 82, 0.5);
+    border-radius: 1rem;
+    transition: transform 0.5s ease-in-out;
+}

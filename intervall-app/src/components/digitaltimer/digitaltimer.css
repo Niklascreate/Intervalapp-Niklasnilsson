@@ -1,0 +1,11 @@
+.digitaltimer-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.digital-time {
+    margin-bottom: 10rem;
+    font-size: 3rem;
+    color: rgb(241, 188, 232);
+}
