@@ -7,22 +7,23 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import AbortBtn from '../../components/abortbtn/AbortBtn';
 import Timer from 'easytimer.js';
 
-const timer = new Timer();
+const timer = new Timer(); // Globala timer-objektet
 
 function TimerPage() {
   const [displayAnalog, setDisplayAnalog] = useState(true);
-  const [timeLeft, setTimeLeft] = useState();
+  const [timeLeft, setTimeLeft] = useState(null);
   const navigate = useNavigate();
-
   const location = useLocation();
   const { time } = location.state || { time: 0 };
 
   useEffect(() => {
-    timer.start({ countdown: true, startValues: { seconds: time } });
-  
+    if (!timer.isRunning() && time > 0) {
+      timer.start({ countdown: true, startValues: { seconds: time } });
+    }
+
     const updateTimer = () => {
-      const remainingTime = timer.getTimeValues().seconds;
-      console.log(remainingTime);
+      const remainingTime = timer.getTotalTimeValues().seconds;
+      console.log(remainingTime)
       setTimeLeft(remainingTime);
 
       if (remainingTime <= 0) {
@@ -31,15 +32,13 @@ function TimerPage() {
       }
     };
 
-
-  
     timer.addEventListener('secondsUpdated', updateTimer);
-  
-    
+
     return () => {
       timer.removeEventListener('secondsUpdated', updateTimer);
     };
-  }, [time]);
+  }, [time, navigate]);
+
 
   const handleAnalogTimer = () => {
     setDisplayAnalog(true);
@@ -56,7 +55,9 @@ function TimerPage() {
         handleDigitalTimer={handleDigitalTimer}
       />
       <div className='timerpage-wrapper'>
-        {displayAnalog ? <AnalogTimer time={timeLeft} /> : <DigitalTimer time={timeLeft}  />}
+        {timeLeft !== null && (
+          displayAnalog ? <AnalogTimer time={timeLeft} /> : <DigitalTimer time={timeLeft} />
+        )}
         <AbortBtn />
       </div>
     </>

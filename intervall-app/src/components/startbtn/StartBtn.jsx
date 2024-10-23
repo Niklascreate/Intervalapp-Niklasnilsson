@@ -1,10 +1,18 @@
+import { div } from 'framer-motion/client';
 import './startbtn.css';
+import { motion } from 'framer-motion';
 
 function StartBtn({ handleStartClick }) {
   return (
-    <button className="start-btn" onClick={handleStartClick}>
+    <motion.button className="start-btn"
+    onClick={handleStartClick}
+    whileHover={{
+        scale: 1.1,
+        boxShadow: '5px 5px 15px #000'
+    }}
+    >
       START TIMER
-    </button>
+    </motion.button>
   );
 }
 

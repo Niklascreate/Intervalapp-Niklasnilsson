@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
 }
 
 .homepage-img {
@@ -10,4 +11,41 @@
     height: auto;
     cursor: pointer;
     width: 184px;
+    animation: moveimg 10s linear infinite;
+}
+
+@keyframes moveimg {
+    0% {
+        transform: translate(0, 0);
+    }
+    10% {
+        transform: translate(5px, 3px);
+    }
+    20% {
+        transform: translate(10px, 6px);
+    }
+    30% {
+        transform: translate(15px, 10px);
+    }
+    40% {
+        transform: translate(10px, 8px);
+    }
+    50% {
+        transform: translate(5px, 5px);
+    }
+    60% {
+        transform: translate(0, 5px);
+    }
+    70% {
+        transform: translate(-5px, 10px);
+    }
+    80% {
+        transform: translate(-10px, 5px);
+    }
+    90% {
+        transform: translate(-5px, 2px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }

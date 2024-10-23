@@ -1,3 +1,11 @@
+.abortbtn-wrapper {
+    display: flex;
+    justify-content: center; /* Centrerar horisontellt */
+    align-items: center; /* Centrerar vertikalt */
+    flex-direction: column; /* Gör att knappen placeras under andra element */
+    height: auto; /* Anpassar höjden till innehållet */
+}
+
 .abort-btn {
     width: 10rem;
     height: auto;
@@ -5,13 +13,10 @@
     border-radius: 0.5rem;
     background-color: white;
     background: linear-gradient(to right, #a18cd1, #fbc2eb);
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
     cursor: pointer;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(0, 0, 0);
     font-weight: bold;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
+    margin-top: 5rem;
 }
