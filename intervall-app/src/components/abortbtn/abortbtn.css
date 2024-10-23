@@ -1,9 +1,9 @@
 .abortbtn-wrapper {
     display: flex;
-    justify-content: center; /* Centrerar horisontellt */
-    align-items: center; /* Centrerar vertikalt */
-    flex-direction: column; /* Gör att knappen placeras under andra element */
-    height: auto; /* Anpassar höjden till innehållet */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
 }
 
 .abort-btn {
@@ -19,4 +19,5 @@
     font-weight: bold;
     letter-spacing: 0.1rem;
     margin-top: 5rem;
+    border: none;
 }

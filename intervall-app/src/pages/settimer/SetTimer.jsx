@@ -1,8 +1,8 @@
-import Menu from '../../components/menu/Menu';
 import StartBtn from '../../components/startbtn/StartBtn';
 import './settimer.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 function SetTimer() {
   const [time, setTime] = useState(0);
@@ -23,17 +23,28 @@ function SetTimer() {
   };
 
   return (
-    <>
-      <div className="settimer-wrapper">
-        <section className='timer-container'>
-          <aside className='decrease' onClick={decreaseTime}></aside>
-          <h3 className='set-time'>{time}</h3>
-          <aside className='increase' onClick={increaseTime}></aside>
-        </section>
-        <p className='minutes'>minutes</p>
-        <StartBtn handleStartClick={handleStart} />
-      </div>
-    </>
+    <div className="settimer-wrapper">
+      <section className='timer-container'>
+        <aside className='decrease' onClick={decreaseTime}></aside>
+        <motion.h3
+          className='set-time'
+          key={time}
+          animate={{ 
+            x: [0, 3, -3, 0],
+            y: [0, 3, -3, 0]
+          }}
+          transition={{
+            duration: 0.3,
+            ease: "easeInOut"
+          }}
+        >
+          {time}
+        </motion.h3>
+        <aside className='increase' onClick={increaseTime}></aside>
+      </section>
+      <p className='minutes'>minutes</p>
+      <StartBtn handleStartClick={handleStart} />
+    </div>
   );
 }
 

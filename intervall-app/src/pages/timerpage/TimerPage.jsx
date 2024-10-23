@@ -7,7 +7,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import AbortBtn from '../../components/abortbtn/AbortBtn';
 import Timer from 'easytimer.js';
 
-const timer = new Timer(); // Globala timer-objektet
+const timer = new Timer();
 
 function TimerPage() {
   const [displayAnalog, setDisplayAnalog] = useState(true);
@@ -23,7 +23,7 @@ function TimerPage() {
 
     const updateTimer = () => {
       const remainingTime = timer.getTotalTimeValues().seconds;
-      console.log(remainingTime)
+      console.log(remainingTime) 
       setTimeLeft(remainingTime);
 
       if (remainingTime <= 0) {

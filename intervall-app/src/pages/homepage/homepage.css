@@ -11,7 +11,7 @@
     height: auto;
     cursor: pointer;
     width: 184px;
-    animation: moveimg 10s linear infinite;
+    animation: moveimg 5s linear infinite;
 }
 
 @keyframes moveimg {
