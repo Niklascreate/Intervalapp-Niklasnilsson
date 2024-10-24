@@ -1,4 +1,3 @@
-import { div } from 'framer-motion/client';
 import './startbtn.css';
 import { motion } from 'framer-motion';
 
